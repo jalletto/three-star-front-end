@@ -6,13 +6,11 @@
   background-size: cover
 }
 
-
-
-/* .article-teaser-info {
-  margin: 0;
-  padding: 0;
-  grid-row: 2/3;
-  height: 100%;
+.headline-info {
+  width: 40%;
+  height: 80%;
+  opacity: 0.37;
   background-color: white;
-  font-size: 1em;
-} */
+  margin: 1em;
+  padding: 1em;
+}
