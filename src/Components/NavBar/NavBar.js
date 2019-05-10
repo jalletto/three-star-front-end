@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../logo.png'
 import './NavBar.css'
 
 class NavBar extends Component {
   render() {
     return (
-      <nav id='nav-bar'>
-        <img src={logo} id='nav-logo'/>
-        <div id='nav-main'>
-          <a class='nav-item nav-item-main' >Movies</a>
-          <a class='nav-item nav-item-main' >TV</a>
-          <a class='nav-item nav-item-main' >Games</a>
-          <a class='nav-item nav-item-main' >Interviews</a>
-          <a class='nav-item nav-item-main' >News</a>
+      <nav className='nav-bar'>
+        <img src={logo} id='nav-logo' alt='threestar-logo'/>
+        <div className='nav-main'>
+          <Link to={'sections/movies'} className='nav-item nav-item-main'>Movies</Link>
+          <a href='#' className='nav-item nav-item-main'>TV</a>
+          <a href='#' className='nav-item nav-item-main'>Games</a>
+          <a href='#' className='nav-item nav-item-main'>Interviews</a>
+          <a href='#' className='nav-item nav-item-main'>News</a>
         </div>
-        <div id='nav-sub'>
-          <a class='nav-item nav-item-sub' >About</a>
-          <a class='nav-item nav-item-sub' >Careers</a>
-          <a class='nav-item nav-item-sub' >Blog</a>
+        <div className='nav-sub'>
+          <a href='#' className='nav-item nav-item-sub'>About</a>
+          <a href='#' className='nav-item nav-item-sub'>Careers</a>
+          <a href='#' className='nav-item nav-item-sub'>Blog</a>
         </div>
+        <div className='mobile-menu'>X</div>
       </nav>
     );
   }
