@@ -5,11 +5,12 @@ class HeadLineTeaser extends Component {
   
   render() {
     const article = this.props.article 
+    const bodyLength = (300 - article.title.length * 2)
     return (
       <div className='headline-teaser' style={{backgroundImage: `url(${article.image_url})`}}>
         <div className='headline-info'>
-          <h1>{article.title}</h1>
-          <p>{article.body.substring(0, 300)}</p>
+          <h1 className='headline-title'>{article.title} - ({article.year})</h1>
+          <p className='headline-body'>{article.body.substring(0, bodyLength)}</p>
         </div>
       </div>
     );
