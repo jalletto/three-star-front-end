@@ -1,0 +1,16 @@
+.headline-teaser {
+  grid-column: 1/4;
+  grid-row: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
+}
+
+.headline-info {
+  width: 40%;
+  height: 80%;
+  opacity: 0.37;
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+}
