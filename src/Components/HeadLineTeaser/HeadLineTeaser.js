@@ -10,7 +10,7 @@ class HeadLineTeaser extends Component {
       <div className='headline-teaser' style={{backgroundImage: `url(${article.image_url})`}}>
         <div className='headline-info'>
           <h1 className='headline-title'>{article.title} - ({article.year})</h1>
-          <p className='headline-body'>{article.body.substring(0, bodyLength)}</p>
+          <p className='headline-body'>{article.body.substring(0, bodyLength)}...</p>
         </div>
       </div>
     );
