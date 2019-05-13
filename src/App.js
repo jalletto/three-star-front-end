@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import NavBar from './Components/NavBar/NavBar'
 import HomePage from './Pages/HomePage'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import SectionPage from './Pages/SectionPage'
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 class App extends Component {
@@ -11,6 +13,7 @@ class App extends Component {
           <NavBar />
           <div id='app-container'>
             <Route path="/" exact component={HomePage} />
+            <Route path="/section/:section" exact component={SectionPage} />
          </div>
       </Router>
     );

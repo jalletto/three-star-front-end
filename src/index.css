@@ -22,5 +22,5 @@ a:link {
   display: grid; 
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1em;
-  grid-auto-rows: minmax(200px, 350px);
+  grid-auto-rows: minmax(200px, 1fr);
 }

@@ -1,5 +1,5 @@
 .nav-bar {
-  height: 69px;
+  height: 89px;
   color: white; 
   background-color: #D52D5A;
   display: grid;
@@ -25,18 +25,18 @@
 
 .nav-main {
   grid-column: 2/3;
-  padding-top: 25px;
+  padding-top: 35px;
   padding-bottom: 5px;
 }
 
 .nav-sub {
   grid-column: 3/4;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 5px;
 }
 
 .mobile-menu {
-  grid-column: 0;
+  display: none;
 }
 
 @media only screen and (max-width: 900px) {
