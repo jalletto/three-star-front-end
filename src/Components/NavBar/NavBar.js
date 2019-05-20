@@ -12,11 +12,11 @@ class NavBar extends Component {
           <img src={logo} id='nav-logo' alt='threestar-logo'/>
         </Link>
         <div className='nav-main'>
-          <Link to={'/sections/movies'} className='nav-item nav-item-main'>Movies</Link>
+          <Link to={'/sections/movie'} className='nav-item nav-item-main'>Movies</Link>
           <Link to={'/sections/tv'} className='nav-item nav-item-main'>TV</Link>
-          <Link to={'/sections/games'} className='nav-item nav-item-main'>Games</Link>
-          <Link to={'/sections/interviews'} className='nav-item nav-item-main'>Interviews</Link>
-          <Link to={'/sections/news'} className='nav-item nav-item-main'>News</Link>
+          <Link to={'/sections/game'} className='nav-item nav-item-main'>Games</Link>
+          <Link to={'/sections/interview'} className='nav-item nav-item-main'>Interviews</Link>
+          <Link to={'/sections/new'} className='nav-item nav-item-main'>News</Link>
         </div>
         <div className='nav-sub'>
           <Link to={'/about'} className='nav-item nav-item-sub'>About</Link>

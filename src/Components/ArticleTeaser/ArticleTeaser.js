@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './ArticleTeaser.css'
+import { Link } from 'react-router-dom';
+
 
 class ArticleTeaser extends Component {
   
@@ -10,11 +12,11 @@ class ArticleTeaser extends Component {
       fontSize = '1em'
     }
     return (
-      <div className='article-teaser' style={{backgroundImage: `url(${article.image_url})`}}>
+      <Link to={`/sections/${article.type_of}/${article.id}`} className='article-teaser' style={{backgroundImage: `url(${article.image_url})`}}>
         <div className='article-teaser-info'>
           <h4 className='article-teaser-title' style={{fontSize: fontSize}}>{article.title} - ({article.year})</h4>
         </div>
-      </div>
+      </Link>
     );
   }
 }

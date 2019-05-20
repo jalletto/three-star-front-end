@@ -5,7 +5,8 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover
+  background-size: cover;
+  color: black;  
 }
 
 .article-teaser-info {
@@ -25,4 +26,10 @@
   margin: 4%;
   font-style: italic;
   text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .article-teaser{
+    grid-column: 1;
+  }
 }

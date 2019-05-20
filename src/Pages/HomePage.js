@@ -20,7 +20,7 @@ class HomePage extends Component {
   render() {  
   const artilceTeasers = this.state.articles.map((article, i) => {
     if(i === 0) {
-      return <HeadLineTeaser article={article} />
+      return <HeadLineTeaser key={i} article={article} />
     }
     return <ArticleTeaser key={i} article={article} />
   })

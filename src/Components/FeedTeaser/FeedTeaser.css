@@ -1,0 +1,30 @@
+.feed-teaser {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
+  color: black
+}
+
+.feed-teaser-title {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+}
+
+.feed-teaser-body {
+  font-size: .5em;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.feed-teaser-image-container {
+  grid-column: 2;
+  grid-row: 1/5;
+
+}
+
+.feed-teaser-image {
+  width: 100%;
+}
+

@@ -13,7 +13,8 @@ class App extends Component {
           <NavBar />
           <div id='app-container'>
             <Route path="/" exact component={HomePage} />
-            <Route path="/section/:section" exact component={SectionPage} />
+            <Route path="/sections/:section" exact component={SectionPage} />
+            <Route path="/sections/:section/:id" exact component={SectionPage} />
          </div>
       </Router>
     );

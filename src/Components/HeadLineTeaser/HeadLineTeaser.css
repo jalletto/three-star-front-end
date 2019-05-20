@@ -4,7 +4,8 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover
+  background-size: cover;
+  color: black;
 }
 
 .headline-info {
@@ -27,4 +28,11 @@
   font-size: 1.1vw;
   line-height: 1.5;
   
+}
+
+@media only screen and (max-width: 900px) {
+  .article-teaser{
+    grid-column: 1;
+    display: hidden;
+  }
 }

@@ -1,0 +1,37 @@
+.main-article {
+  grid-column: 1;
+  grid-row: 2;
+  margin-left: 5%;
+}
+
+.main-article-image {
+  width: 80%;
+  /* padding-left: 15%; */
+}
+
+.main-article-title {
+  margin-left: 2%;
+  font-size: 3em;
+  padding-right: 20%;
+}
+
+.main-article-body {
+  padding-left: 4%;
+  padding-right: 25%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 2;
+  letter-spacing: -.003em;
+  font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif
+}
+
+.main-article-body:first-letter {
+  float: left;
+  font-family: Georgia;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
