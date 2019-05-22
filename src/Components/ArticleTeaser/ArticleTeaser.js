@@ -8,7 +8,7 @@ class ArticleTeaser extends Component {
   render() {
     const article = this.props.article
     let fontSize = '2vw'
-    if (article.title.length > 37) {
+    if (article.title.length > 25) {
       fontSize = '1em'
     }
     return (
@@ -22,6 +22,3 @@ class ArticleTeaser extends Component {
 }
 
 export default ArticleTeaser;
-
-
-

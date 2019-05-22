@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Article from '../Components/Article/Article';
 import Feed from '../Components/Feed/Feed'
+import ArticlesAPI from '../api/ArticlesAPI.js'
+
 
 class SectionPage extends Component {
 
@@ -13,15 +15,13 @@ class SectionPage extends Component {
 
   getArticleByID() {
     const id = this.props.match.params.id
-    return fetch(`http://127.0.0.1:8000/blog/${id}`)
-    .then(response => response.json())
-    .then(json => this.setState({mainArticle: json}))
+    ArticlesAPI.fetchArticleById(id)
+      .then(json => this.setState({mainArticle: json}))
   }
 
   getLatestArticles(){
     const section = this.props.match.params.section
-    return fetch(`http://127.0.0.1:8000/blog/latest/${section}`)
-      .then(response => response.json())
+    ArticlesAPI.fetchArticlesBySection(section)
       .then(json => this.setState({articles: json.articles, has_next: json.has_next, next_page: json.next_page}) )
   }
 
@@ -49,7 +49,7 @@ class SectionPage extends Component {
     return (
       <div className='section-page'>
         <h1 className='section-title'>3 Star {section.charAt(0).toUpperCase() + section.slice(1)}s</h1>
-        {mainArticle ? <Article article={mainArticle} /> : null } 
+        { mainArticle ? <Article article={mainArticle} /> : null } 
         <Feed  articles={articles}/>
       </div>
     );

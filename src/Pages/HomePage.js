@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ArticleTeaser from '../Components/ArticleTeaser/ArticleTeaser';
 import HeadLineTeaser from '../Components/HeadLineTeaser/HeadLineTeaser';
+import ArticlesAPI from '../api/ArticlesAPI.js'
 
 class HomePage extends Component {
 
@@ -12,8 +13,7 @@ class HomePage extends Component {
   }
 
   componentDidMount(){
-    return fetch('http://127.0.0.1:8000/blog/')
-      .then(response => response.json())
+    ArticlesAPI.fetchLatestArticles()
       .then(json => this.setState({articles: json}) )
   }
 
