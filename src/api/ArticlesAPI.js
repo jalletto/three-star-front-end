@@ -1,5 +1,5 @@
 
-const URL = 'https://threestarapi.herokuapp.com/blog'
+const URL = 'https://cors-anywhere.herokuapp.com/https://threestarapi.herokuapp.com/blog'
 
 const fetchLatestArticles = () => {
   return fetch(`${URL}/`)
