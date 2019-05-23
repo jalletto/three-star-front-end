@@ -8,11 +8,12 @@ class HeadLineTeaser extends Component {
   render() {
     const article = this.props.article 
     const bodyLength = (300 - article.title.length * 2)
+    const body = article.body.substring(0, bodyLength) + '...'
     return (
       <Link to={`/sections/${article.type_of}/${article.id}`} className='headline-teaser' style={{backgroundImage: `url(${article.image_url})`}}>
         <div className='headline-info'>
           <h1 className='headline-title'>{article.title} - ({article.year})</h1>
-          <p className='headline-body'>{article.body.substring(0, bodyLength)}...</p>
+          <div dangerouslySetInnerHTML={{__html: body}} className='headline-body'/>
         </div>
       </Link>
     );

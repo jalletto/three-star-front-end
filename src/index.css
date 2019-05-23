@@ -28,7 +28,7 @@ a:link {
 .section-page {
   display: grid;
   grid-template-columns: 5fr 2fr;
-  grid-template-rows: 1fr 8fr;
+  grid-template-rows: auto;
 }
 
 .section-title {

@@ -6,10 +6,11 @@ class FeedTeaser extends Component {
 
   render() {  
     const article = this.props.article
+    const teaserBody = article.body.substring(0, 200) + '...'
     return (
       <Link className='feed-teaser' to={`/sections/${article.type_of}/${article.id}`}>
         <h4 className='feed-teaser-title'>{article.title}</h4>
-        <p className='feed-teaser-body'>{article.body.substring(0, 200)}...</p>
+        <div dangerouslySetInnerHTML={{__html: teaserBody}} className='feed-teaser-body'/>
         <div className='feed-teaser-image-container'>
           <img className='feed-teaser-image' src={article.image_url} />
         </div>
