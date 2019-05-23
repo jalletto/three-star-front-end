@@ -17,19 +17,33 @@
   height: 100%;
   background-color: white;
   background-color:rgba(255,255,255,0.4);
- 
   overflow-wrap: break-word;
 }
 
 .article-teaser-title {
-  /* font size set in component */
   margin: 4%;
   font-style: italic;
   text-align: center;
 }
 
 @media only screen and (max-width: 900px) {
-  .article-teaser{
-    grid-column: 1;
+
+  .article-teaser {
+    display: grid;
+    grid-template-rows: 60% 40%;
+    grid-column: 1/4;
+
   }
+
+  .article-teaser-info {
+    grid-row: 2/3;
+  }
+  
+  .article-teaser-title {
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+    font-style: italic;
+    font-size: 2em;
+    padding-bottom: 5%;
+  }
+
 }

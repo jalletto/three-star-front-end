@@ -31,8 +31,25 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .article-teaser{
-    grid-column: 1;
-    display: hidden;
+  .headline-teaser {
+    display: grid;
+    grid-template-rows: 60% 40%;
+    grid-column: 1/4;
+  }
+  
+  .headline-info {
+    grid-row: 2/3;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .headline-title {
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+    font-style: italic;
+    font-size: 2em;
+    text-align: center;  
+  }
+  .headline-body {
+    display: none
   }
 }

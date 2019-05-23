@@ -18,12 +18,14 @@ class HomePage extends Component {
   }
 
   render() {  
-  const artilceTeasers = this.state.articles.map((article, i) => {
-    if(i === 0) {
-      return <HeadLineTeaser key={i} article={article} />
-    }
-    return <ArticleTeaser key={i} article={article} />
-  })
+    const isDeskTop = window.innerWidth > 900;
+    const artilceTeasers = this.state.articles.map((article, i) => {
+      if(i === 0 && isDeskTop) {
+        return <HeadLineTeaser key={i} article={article} />
+      }
+      return <ArticleTeaser key={i} article={article} />
+    })
+
     return (
       <div className='home-page'>
         {artilceTeasers}
