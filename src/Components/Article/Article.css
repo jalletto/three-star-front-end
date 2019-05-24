@@ -37,7 +37,13 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .main-article{
-    padding-left: 9%;
+  .main-article-image{
+    padding-left: 7%;
+  }
+
+  .main-article-body {
+    padding-left: 0;
+    padding-right: 7%;
+    align-content: center;
   }
 }
