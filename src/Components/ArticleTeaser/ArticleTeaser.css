@@ -37,12 +37,13 @@
 
   .article-teaser-info {
     grid-row: 2/3;
+    margin-top: 20px;
   }
   
   .article-teaser-title {
     font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
     font-style: italic;
-    font-size: 2em;
+    font-size: 20px;
     padding-bottom: 5%;
   }
 

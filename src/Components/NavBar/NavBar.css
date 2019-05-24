@@ -62,6 +62,7 @@
   }
   
   .nav-main {
+    font-family: Arial;
     grid-column: 1;
     grid-row-start: 2;
     margin-top: 0;

@@ -17,12 +17,20 @@ class NavBar extends Component {
     this.setState({showMenu: !this.state.showMenu})
   }
 
-  handleWindowResize = () => {
+  setIsMobile() {
     if(window.innerWidth > 900 && !this.state.showMenu) {
       this.setState({showMenu: true, isMobile: false})
     } else if(window.innerWidth < 900 && this.state.showMenu){
       this.setState({showMenu: false, isMobile: true})
     }
+  }
+
+  handleWindowResize = () => {
+    this.setIsMobile()
+  }
+
+  componentWillMount(){
+    this.setIsMobile()
   }
 
   componentDidMount() {
