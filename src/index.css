@@ -42,4 +42,14 @@ a:link {
   .home-page{
     grid-template-columns: 1fr;
   }
+
+  .section-page {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    grid-column: 1;
+    text-align: center;
+    margin-left: 0;
+  }
 }
