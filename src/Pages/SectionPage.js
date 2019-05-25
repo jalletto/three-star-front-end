@@ -33,6 +33,7 @@ class SectionPage extends Component {
         this.getArticleByID()
       }
     }
+    window.scrollTo(0, 0)
   }
 
   componentDidMount() {
