@@ -46,7 +46,7 @@
   .headline-title {
     font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
     font-style: italic;
-    font-size: 2em;
+    font-size: 100%;
     text-align: center;  
   }
   .headline-body {
