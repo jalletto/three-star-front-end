@@ -62,7 +62,7 @@ class NavBar extends Component {
         <div className={this.state.showMenu ? 'nav-sub' : 'hidden'}>
           <Link to={'/about'} className='nav-item nav-item-sub'>About</Link>
           <Link to={'/careers'} className='nav-item nav-item-sub'>Careers</Link>
-          <Link to={'sections/blog'} className='nav-item nav-item-sub'>Blog</Link>
+          <Link to={'/sections/blog'} className='nav-item nav-item-sub'>Blog</Link>
         </div>
       </nav>
     );

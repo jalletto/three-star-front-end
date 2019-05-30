@@ -47,10 +47,14 @@ class SectionPage extends Component {
   render() {  
     const mainArticle = this.state.mainArticle 
     const section = this.props.match.params.section
-    
+    let title = section.charAt(0).toUpperCase() + section.slice(1)
+    const notPlural = ['Tv', 'Blog']
+    if(!notPlural.includes(title)){
+      title += 's'
+    }
     return (
       <div className='section-page'>
-        <h1 className='section-title'>3 Star {section.charAt(0).toUpperCase() + section.slice(1)}s</h1>
+        <h1 className='section-title'>3 Star {title}</h1>
         { mainArticle ? <Article article={mainArticle} /> : null } 
         <Feed  section={section} />
       </div>
