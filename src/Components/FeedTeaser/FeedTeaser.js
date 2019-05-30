@@ -6,7 +6,6 @@ class FeedTeaser extends Component {
 
   render() {  
     const article = this.props.article
-    console.log('here' + article)
     const teaserBody = article.body.substring(0, 200) + '...'
     return (
       <Link className='feed-teaser' to={`/sections/${article.type_of}/${article.id}`}>

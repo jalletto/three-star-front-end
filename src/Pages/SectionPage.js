@@ -47,6 +47,7 @@ class SectionPage extends Component {
   render() {  
     const mainArticle = this.state.mainArticle 
     const section = this.props.match.params.section
+    
     return (
       <div className='section-page'>
         <h1 className='section-title'>3 Star {section.charAt(0).toUpperCase() + section.slice(1)}s</h1>

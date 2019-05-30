@@ -19,9 +19,7 @@ class Feed extends Component {
     const nexPage = this.state.nextPage || 1
     ArticlesAPI.fetchArticlesBySection(section, nexPage)
       .then(json => {
-        console.log(json)
         this.articles = this.articles.concat(json.articles)
-        console.log(this.articles)
         this.setState({
                       articles: this.articles, 
                       hasNext: json.has_next, 
@@ -35,7 +33,12 @@ class Feed extends Component {
     if(this.state.hasNext){
       this.getLatestArticles()
     }
-
+  }
+  componentDidUpdate(prevProps, prevState){
+    if(prevProps.section !== this.props.section){
+      this.articles = []
+      this.getLatestArticles()
+    }
   }
 
   componentDidMount(){
@@ -43,6 +46,7 @@ class Feed extends Component {
   }
 
   render() {  
+    
     const feedTeasers = this.state.articles.map(article => <FeedTeaser key={article.id} article={article} />)
     return (
       <div className='feed'>
