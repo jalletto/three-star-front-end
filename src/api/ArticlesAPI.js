@@ -11,10 +11,12 @@ const fetchArticleById = (id) => {
     .then(response => response.json())
 }
 
-const fetchArticlesBySection = (section) => {
-  return fetch(`${URL}/latest/${section}`)
+const fetchArticlesBySection = (section, page=null) => {
+  const next_page = page ? page : '1'
+  return fetch(`${URL}/latest/${section}?page=${next_page}`)
     .then(response => response.json())
 }
+
 
 export default {
   fetchLatestArticles: fetchLatestArticles,

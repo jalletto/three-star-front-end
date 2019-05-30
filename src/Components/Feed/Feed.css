@@ -4,6 +4,11 @@
   margin-right: 8%;
 }
 
+.feed-teasers { 
+  max-height: 600px;
+  overflow: scroll
+}
+
 .feed-title {
   margin-top: 0;
   padding-bottom: 3%;

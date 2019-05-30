@@ -9,7 +9,7 @@ class SectionPage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      articles : []
+      mainArticle : null
     }
   }
 
@@ -19,39 +19,39 @@ class SectionPage extends Component {
       .then(json => this.setState({mainArticle: json}))
   }
 
-  getLatestArticles(){
+  getMostRecentArticle(){
     const section = this.props.match.params.section
     ArticlesAPI.fetchArticlesBySection(section)
-      .then(json => this.setState({articles: json.articles, has_next: json.has_next, next_page: json.next_page}) )
+      .then(json => this.setState({mainArticle: json.articles[0]}))
+  }
+
+  getMainArticle() {
+    if(this.props.match.params.id){
+      this.getArticleByID()
+    } else {
+      this.getMostRecentArticle()
+    }
   }
 
   componentDidUpdate(_prevProps, prevState){
-    if(prevState === this.state) {
-      this.getLatestArticles()
-      
-      if(this.props.match.params.id){
-        this.getArticleByID()
-      }
+    if(prevState === this.state) { 
+      this.getMainArticle()
     }
     window.scrollTo(0, 0)
   }
 
   componentDidMount() {
-    if(this.props.match.params.id){
-      this.getArticleByID()
-    }
-    this.getLatestArticles()
+    this.getMainArticle()
   }
 
   render() {  
-    const articles = this.state.articles
-    const mainArticle = this.state.mainArticle || this.state.articles[0]
+    const mainArticle = this.state.mainArticle 
     const section = this.props.match.params.section
     return (
       <div className='section-page'>
         <h1 className='section-title'>3 Star {section.charAt(0).toUpperCase() + section.slice(1)}s</h1>
         { mainArticle ? <Article article={mainArticle} /> : null } 
-        <Feed  articles={articles}/>
+        <Feed  section={section} />
       </div>
     );
   }

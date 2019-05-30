@@ -18,9 +18,10 @@
 }
 
 .headline-title {
-  font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+  font-family: 'Work Sans', sans-serif;
   font-style: italic;
   font-size: 3vw;
+
 }
 
 .headline-body {
@@ -44,7 +45,7 @@
   }
   
   .headline-title {
-    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+    font-family: 'Work Sans', sans-serif;
     font-style: italic;
     font-size: 100%;
     text-align: center;  
