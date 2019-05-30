@@ -8,10 +8,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+:root{
+  --title-font: 'Work Sans', sans-serif;
+  --mobile-break-point: 900px
 }
+
 
 a:link {
   text-decoration: none;
@@ -35,8 +36,8 @@ a:link {
   grid-row: 1;
   margin-left: 50%;
   font-size: 3em;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
+  font-family: var(--title-font);
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 900px) {

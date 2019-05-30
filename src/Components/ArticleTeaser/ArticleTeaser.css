@@ -9,7 +9,7 @@
 }
 
 .article-teaser-info {
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--title-font);
   margin: 0;
   padding: 0;
   grid-row: 2/3;

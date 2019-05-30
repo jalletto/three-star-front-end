@@ -18,7 +18,7 @@
 }
 
 .headline-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--title-font);
   font-style: italic;
   font-size: 3vw;
 
@@ -45,7 +45,7 @@
   }
   
   .headline-title {
-    font-family: 'Work Sans', sans-serif;
+    font-family: var(--title-font);
     font-style: italic;
     font-size: 100%;
     text-align: center;  
