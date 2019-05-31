@@ -57,7 +57,7 @@ class NavBar extends Component {
           <Link to={'/sections/tv'} className='nav-item nav-item-main'>TV</Link>
           <Link to={'/sections/game'} className='nav-item nav-item-main'>Games</Link>
           <Link to={'/sections/interview'} className='nav-item nav-item-main'>Interviews</Link>
-          <Link to={'/sections/new'} className='nav-item nav-item-main'>News</Link>
+          <Link to={'/sections/news'} className='nav-item nav-item-main'>News</Link>
         </div>
         <div className={this.state.showMenu ? 'nav-sub' : 'hidden'}>
           <Link to={'/about'} className='nav-item nav-item-sub'>About</Link>
