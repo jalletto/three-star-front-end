@@ -48,7 +48,7 @@ class SectionPage extends Component {
     const mainArticle = this.state.mainArticle 
     const section = this.props.match.params.section
     let title = section.charAt(0).toUpperCase() + section.slice(1)
-    const notPlural = ['Tv', 'Blog']
+    const notPlural = ['Tv', 'Blog', 'News']
     if(!notPlural.includes(title)){
       title += 's'
     }
