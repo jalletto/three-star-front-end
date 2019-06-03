@@ -4,8 +4,9 @@
   margin-left: 5%;
 }
 
-.main-article-image {
+.main-article img{
   width: 80%;
+  height: auto;
 }
 
 .main-article-title {
@@ -47,4 +48,5 @@
     padding-right: 7%;
     align-content: center;
   }
+
 }
