@@ -8,7 +8,9 @@ class Article extends Component {
     const body = article.body
     return (
       <div className='main-article'>
-        <img className='main-article-image' src={article.image_url} alt={article.title} />
+        <div className='main-article-image-container'>
+          <img className='main-article-image' src={article.image_url} alt={article.title} />
+        </div>
         <h2 className='main-article-title'>{article.title} - {article.year}</h2>
         <div dangerouslySetInnerHTML={{__html: body}} className='main-article-body'/>
       </div>
