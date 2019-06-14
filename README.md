@@ -1,1 +1,1 @@
-[threestarreview](www.threestarreview.com)
+[threestarreview](http://www.threestarreview.com/)
